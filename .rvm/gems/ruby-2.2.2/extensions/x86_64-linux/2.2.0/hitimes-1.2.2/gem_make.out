@@ -1,0 +1,17 @@
+/home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150529-20163-1mhc9mq.rb extconf.rb
+checking for clock_gettime() in -lrt... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling hitimes_interval.c
+compiling hitimes_stats.c
+compiling hitimes_instant_windows.c
+compiling hitimes.c
+compiling hitimes_instant_osx.c
+compiling hitimes_instant_clock_gettime.c
+linking shared-object hitimes/2.2/hitimes.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 hitimes.so ./.gem.20150529-20163-udimvu/hitimes/2.2

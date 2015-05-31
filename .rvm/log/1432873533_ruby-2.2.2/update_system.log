@@ -1,0 +1,139 @@
+[2015-05-29 13:25:33] requirements_debian_update_system
+requirements_debian_update_system () 
+{ 
+    __rvm_try_sudo apt-get --quiet --yes update || { 
+        \typeset __ret=$?;
+        case ${__ret} in 
+            100)
+                rvm_error "There has been error while updating 'apt-get', please give it some time and try again later.
+404 errors should be fixed for rvm to proceed. Check your sources configured in:
+    /etc/apt/sources.list
+    /etc/apt/sources.list.d/*.list
+"
+            ;;
+        esac;
+        return ${__ret}
+    }
+}
+current path: /home/gentle6318
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin
+command(2): requirements_debian_update_system ruby-2.2.2
+++ __rvm_try_sudo apt-get --quiet --yes update
+++ typeset -a command_to_run
+++ typeset sudo_path sbin_path missing_paths
+++ command_to_run=("$@")
+++ ((  UID == 0  ))
+++ case "$rvm_autolibs_flag_number" in
+++ is_a_function __rvm_sudo
+++ typeset -f __rvm_sudo
+++ missing_paths=
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/local/sbin ]]
+++ [[ :/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ [[ -n '' ]]
+++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ command sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+Sorry, try again.
+무시http://kr.archive.ubuntu.com trusty InRelease
+무시http://kr.archive.ubuntu.com trusty-updates InRelease
+무시http://kr.archive.ubuntu.com trusty-backports InRelease
+기존 http://kr.archive.ubuntu.com trusty Release.gpg
+받기:1 http://kr.archive.ubuntu.com trusty-updates Release.gpg [933 B]
+받기:2 http://kr.archive.ubuntu.com trusty-backports Release.gpg [933 B]
+기존 http://kr.archive.ubuntu.com trusty Release
+받기:3 http://kr.archive.ubuntu.com trusty-updates Release [63.5 kB]
+무시http://security.ubuntu.com trusty-security InRelease
+받기:4 http://kr.archive.ubuntu.com trusty-backports Release [63.5 kB]
+기존 http://kr.archive.ubuntu.com trusty/main Sources
+기존 http://kr.archive.ubuntu.com trusty/restricted Sources
+무시http://extras.ubuntu.com trusty InRelease
+기존 http://kr.archive.ubuntu.com trusty/universe Sources
+기존 http://kr.archive.ubuntu.com trusty/multiverse Sources
+받기:5 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+기존 http://kr.archive.ubuntu.com trusty/main amd64 Packages
+기존 http://kr.archive.ubuntu.com trusty/restricted amd64 Packages
+기존 http://kr.archive.ubuntu.com trusty/universe amd64 Packages
+기존 http://kr.archive.ubuntu.com trusty/multiverse amd64 Packages
+기존 http://kr.archive.ubuntu.com trusty/main i386 Packages
+받기:6 http://extras.ubuntu.com trusty Release.gpg [72 B]
+기존 http://kr.archive.ubuntu.com trusty/restricted i386 Packages
+받기:7 http://security.ubuntu.com trusty-security Release [63.5 kB]
+기존 http://kr.archive.ubuntu.com trusty/universe i386 Packages
+기존 http://kr.archive.ubuntu.com trusty/multiverse i386 Packages
+기존 http://kr.archive.ubuntu.com trusty/main Translation-ko
+기존 http://kr.archive.ubuntu.com trusty/main Translation-en
+기존 http://kr.archive.ubuntu.com trusty/multiverse Translation-en
+기존 http://extras.ubuntu.com trusty Release
+기존 http://kr.archive.ubuntu.com trusty/restricted Translation-ko
+기존 http://kr.archive.ubuntu.com trusty/restricted Translation-en
+기존 http://kr.archive.ubuntu.com trusty/universe Translation-ko
+기존 http://kr.archive.ubuntu.com trusty/universe Translation-en
+받기:8 http://kr.archive.ubuntu.com trusty-updates/main Sources [206 kB]
+기존 http://extras.ubuntu.com trusty/main Sources
+받기:9 http://kr.archive.ubuntu.com trusty-updates/restricted Sources [3,433 B]
+받기:10 http://kr.archive.ubuntu.com trusty-updates/universe Sources [118 kB]
+받기:11 http://security.ubuntu.com trusty-security/main Sources [81.9 kB]
+받기:12 http://kr.archive.ubuntu.com trusty-updates/multiverse Sources [5,152 B]
+받기:13 http://kr.archive.ubuntu.com trusty-updates/main amd64 Packages [507 kB]
+기존 http://extras.ubuntu.com trusty/main amd64 Packages
+받기:14 http://kr.archive.ubuntu.com trusty-updates/restricted amd64 Packages [11.8 kB]
+받기:15 http://kr.archive.ubuntu.com trusty-updates/universe amd64 Packages [279 kB]
+받기:16 http://security.ubuntu.com trusty-security/restricted Sources [2,061 B]
+기존 http://extras.ubuntu.com trusty/main i386 Packages
+받기:17 http://kr.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [11.9 kB]
+받기:18 http://security.ubuntu.com trusty-security/universe Sources [25.2 kB]
+받기:19 http://kr.archive.ubuntu.com trusty-updates/main i386 Packages [493 kB]
+받기:20 http://kr.archive.ubuntu.com trusty-updates/restricted i386 Packages [11.8 kB]
+받기:21 http://security.ubuntu.com trusty-security/multiverse Sources [2,333 B]
+받기:22 http://kr.archive.ubuntu.com trusty-updates/universe i386 Packages [280 kB]
+받기:23 http://kr.archive.ubuntu.com trusty-updates/multiverse i386 Packages [12.1 kB]
+받기:24 http://security.ubuntu.com trusty-security/main amd64 Packages [273 kB]
+받기:25 http://kr.archive.ubuntu.com trusty-updates/main Translation-en [245 kB]
+받기:26 http://kr.archive.ubuntu.com trusty-updates/multiverse Translation-en [6,148 B]
+받기:27 http://kr.archive.ubuntu.com trusty-updates/restricted Translation-en [2,774 B]
+받기:28 http://kr.archive.ubuntu.com trusty-updates/universe Translation-en [145 kB]
+받기:29 http://kr.archive.ubuntu.com trusty-backports/main Sources [5,851 B]
+받기:30 http://kr.archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+받기:31 http://kr.archive.ubuntu.com trusty-backports/universe Sources [26.2 kB]
+받기:32 http://kr.archive.ubuntu.com trusty-backports/multiverse Sources [1,898 B]
+받기:33 http://kr.archive.ubuntu.com trusty-backports/main amd64 Packages [6,256 B]
+받기:34 http://kr.archive.ubuntu.com trusty-backports/restricted amd64 Packages [28 B]
+받기:35 http://kr.archive.ubuntu.com trusty-backports/universe amd64 Packages [29.9 kB]
+받기:36 http://kr.archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1,245 B]
+받기:37 http://kr.archive.ubuntu.com trusty-backports/main i386 Packages [6,285 B]
+받기:38 http://kr.archive.ubuntu.com trusty-backports/restricted i386 Packages [28 B]
+받기:39 http://kr.archive.ubuntu.com trusty-backports/universe i386 Packages [29.9 kB]
+받기:40 http://kr.archive.ubuntu.com trusty-backports/multiverse i386 Packages [1,249 B]
+기존 http://kr.archive.ubuntu.com trusty-backports/main Translation-en
+기존 http://kr.archive.ubuntu.com trusty-backports/multiverse Translation-en
+기존 http://kr.archive.ubuntu.com trusty-backports/restricted Translation-en
+받기:41 http://kr.archive.ubuntu.com trusty-backports/universe Translation-en [26.4 kB]
+받기:42 http://security.ubuntu.com trusty-security/restricted amd64 Packages [8,875 B]
+받기:43 http://security.ubuntu.com trusty-security/universe amd64 Packages [105 kB]
+무시http://kr.archive.ubuntu.com trusty/main Translation-ko_KR
+무시http://kr.archive.ubuntu.com trusty/multiverse Translation-ko_KR
+무시http://kr.archive.ubuntu.com trusty/multiverse Translation-ko
+무시http://kr.archive.ubuntu.com trusty/restricted Translation-ko_KR
+무시http://kr.archive.ubuntu.com trusty/universe Translation-ko_KR
+받기:44 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [3,681 B]
+받기:45 http://security.ubuntu.com trusty-security/main i386 Packages [261 kB]
+무시http://extras.ubuntu.com trusty/main Translation-ko_KR
+받기:46 http://security.ubuntu.com trusty-security/restricted i386 Packages [8,846 B]
+받기:47 http://security.ubuntu.com trusty-security/universe i386 Packages [105 kB]
+무시http://extras.ubuntu.com trusty/main Translation-ko
+무시http://extras.ubuntu.com trusty/main Translation-en
+받기:48 http://security.ubuntu.com trusty-security/multiverse i386 Packages [3,840 B]
+받기:49 http://security.ubuntu.com trusty-security/main Translation-en [139 kB]
+받기:50 http://security.ubuntu.com trusty-security/multiverse Translation-en [1,679 B]
+기존 http://security.ubuntu.com trusty-security/restricted Translation-en
+받기:51 http://security.ubuntu.com trusty-security/universe Translation-en [59.3 kB]
+내려받기 3,747 k바이트, 소요시간 8초 (454 k바이트/초)
+패키지 목록을 읽는 중입니다...

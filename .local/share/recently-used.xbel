@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///media/gentle6318/VBOXADDITIONS_4.3.26_989881" added="2015-05-29T04:06:52Z" modified="2015-05-29T04:06:52Z" visited="2015-05-29T04:06:52Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;nautilus-autorun-software %u&apos;" modified="2015-05-29T04:06:52Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/gentle6318/gentle6318.github.com/_posts/2015-05-31.md" added="2015-05-31T09:15:40Z" modified="2015-05-31T09:15:42Z" visited="2015-05-31T09:15:40Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-markdown"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="nautilus" exec="&apos;gedit %U&apos;" modified="2015-05-31T09:15:40Z" count="1"/>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2015-05-31T09:15:42Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/gentle6318/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/freelancer-theme-master.zip" added="2015-05-31T09:27:44Z" modified="2015-05-31T09:28:47Z" visited="2015-05-31T09:27:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2015-05-31T09:27:44Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2015-05-31T09:28:47Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/gentle6318/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C" added="2015-05-31T09:29:03Z" modified="2015-05-31T14:53:27Z" visited="2015-05-31T09:29:03Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Archive Manager" exec="&apos;file-roller %u&apos;" modified="2015-05-31T14:53:27Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/gentle6318/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/metaphor-jekyll-master.zip" added="2015-05-31T14:52:30Z" modified="2015-05-31T14:53:18Z" visited="2015-05-31T14:52:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Firefox" exec="&apos;firefox %u&apos;" modified="2015-05-31T14:52:30Z" count="1"/>
+          <bookmark:application name="File Roller" exec="&apos;file-roller&apos;" modified="2015-05-31T14:53:18Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

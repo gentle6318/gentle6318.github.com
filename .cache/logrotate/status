@@ -1,0 +1,22 @@
+logrotate state -- version 2
+"/home/gentle6318/.cache/upstart/at-spi2-registryd.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/gnome-keyring-gpg.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/unity-settings-daemon.log" 2015-5-30-15:19:20
+"/home/gentle6318/.cache/upstart/unicast-local-avahi.log" 2015-5-30-15:19:20
+"/home/gentle6318/.cache/upstart/update-notifier-cds.log" 2015-5-29-13:6:28
+"/home/gentle6318/.cache/upstart/indicator-session.log" 2015-5-31-7:52:36
+"/home/gentle6318/.cache/upstart/gnome-session-Unity.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/im-config.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/window-stack-bridge.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/update-notifier-release.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/gnome-keyring-ssh.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/upstart-event-bridge.log" 2015-5-31-7:52:36
+"/home/gentle6318/.cache/upstart/indicator-printers.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/hud.log" 2015-5-30-15:19:20
+"/home/gentle6318/.cache/upstart/indicator-power.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/indicator-bluetooth.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/ssh-agent.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/indicator-sound.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/dbus.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/unity7.log" 2015-6-1-1:20:9
+"/home/gentle6318/.cache/upstart/unity-panel-service.log" 2015-6-1-1:20:9

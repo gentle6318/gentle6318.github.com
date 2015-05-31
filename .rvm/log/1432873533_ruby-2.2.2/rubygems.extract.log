@@ -1,0 +1,65 @@
+[2015-05-29 13:31:37] __rvm_package_extract
+__rvm_package_extract () 
+{ 
+    rvm_debug __rvm_package_extract:$#: "$@";
+    \typeset __tempdir __path __file __return;
+    __return=0;
+    __tempdir="$( TMPDIR="${rvm_tmp_path}" mktemp -d -t rvm-tmp.XXXXXXXXX )";
+    __rvm_package_extract_run "$1" "$__tempdir" || __return=$?;
+    if (( __return == 0 )); then
+        for __path in "$__tempdir"/*;
+        do
+            __file="${__path##*/}";
+            if [[ -n "${__file}" && -e "$2/${__file}" ]]; then
+                \command \rm -rf "$2/${__file}" || __return=$?;
+            fi;
+            \command \mv -f "${__path}" "$2/" || __return=$?;
+        done;
+    fi;
+    if [[ -n "$__tempdir" ]]; then
+        \command \rm -rf "$__tempdir";
+    fi;
+    return $__return
+}
+current path: /home/gentle6318/.rvm/src/ruby-2.2.2
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin
+command(3): __rvm_package_extract /home/gentle6318/.rvm/archives/rubygems-2.4.7.tgz /home/gentle6318/.rvm/src
+++ rvm_debug __rvm_package_extract:2: /home/gentle6318/.rvm/archives/rubygems-2.4.7.tgz /home/gentle6318/.rvm/src
+++ ((  0  ))
+++ return 0
+++ typeset __tempdir __path __file __return
+++ __return=0
++++ TMPDIR=/home/gentle6318/.rvm/tmp
++++ mktemp -d -t rvm-tmp.XXXXXXXXX
+++ __tempdir=/home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ
+++ __rvm_package_extract_run /home/gentle6318/.rvm/archives/rubygems-2.4.7.tgz /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ
+++ [[    != *\ \-\-\n\o\-\s\a\m\e\-\o\w\n\e\r\ * ]]
+++ __rvm_grep -- --no-same-owner
+++ __rvm_tar --help
+++ GREP_OPTIONS=
+++ command grep -- --no-same-owner
+++ grep -- --no-same-owner
+++ rvm_tar_options=--no-same-owner
+++ [[ -d /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ ]]
+++ case "$1" in
+++ [[ -n '' ]]
+++ __rvm_tar xzf /home/gentle6318/.rvm/archives/rubygems-2.4.7.tgz -C /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ --no-same-owner
+++ tar xzf /home/gentle6318/.rvm/archives/rubygems-2.4.7.tgz -C /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ --no-same-owner
+++ __rvm_fix_group_permissions /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ/rubygems-2.4.7
+++ __rvm_grep g=rw
+++ GREP_OPTIONS=
+++ umask -S
+++ command grep g=rw
+++ grep g=rw
+++ chmod -R g+rwX /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ/rubygems-2.4.7
+++ ((  __return == 0  ))
+++ for __path in '"$__tempdir"/*'
+++ __file=rubygems-2.4.7
+++ [[ -n rubygems-2.4.7 ]]
+++ [[ -e /home/gentle6318/.rvm/src/rubygems-2.4.7 ]]
+++ command mv -f /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ/rubygems-2.4.7 /home/gentle6318/.rvm/src/
+++ mv -f /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ/rubygems-2.4.7 /home/gentle6318/.rvm/src/
+++ [[ -n /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ ]]
+++ command rm -rf /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ
+++ rm -rf /home/gentle6318/.rvm/tmp/rvm-tmp.VcMkrk6QZ
+++ return 0

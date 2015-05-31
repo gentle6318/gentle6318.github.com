@@ -1,0 +1,23 @@
+/home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20150529-20163-1ls6d4h.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling yajl_alloc.c
+compiling yajl_parser.c
+compiling yajl.c
+compiling yajl_version.c
+compiling yajl_ext.c
+yajl_ext.c: In function ‘rb_yajl_parser_parse’:
+yajl_ext.c:471:17: warning: variable ‘stat’ set but not used [-Wunused-but-set-variable]
+     yajl_status stat;
+                 ^
+compiling yajl_lex.c
+compiling yajl_gen.c
+compiling yajl_encode.c
+compiling yajl_buf.c
+linking shared-object yajl/yajl.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 yajl.so ./.gem.20150529-20163-1ubzo8f/yajl

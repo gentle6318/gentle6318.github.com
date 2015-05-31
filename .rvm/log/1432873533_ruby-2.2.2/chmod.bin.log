@@ -1,0 +1,25 @@
+[2015-05-29 13:31:34] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/gentle6318/.rvm/src/ruby-2.2.2
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/gentle6318/.rvm/bin:/home/gentle6318/.rvm/bin
+command(8): __rvm_set_executable /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/erb /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/gem /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/irb /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/rake /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/rdoc /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ri /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ruby
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/erb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/gem ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/irb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/rake ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/rdoc ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ri ]]
+++ for __file in '"$@"'
+++ [[ -x /home/gentle6318/.rvm/rubies/ruby-2.2.2/bin/ruby ]]
